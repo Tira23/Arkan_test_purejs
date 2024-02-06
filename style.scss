@@ -48,7 +48,7 @@ table {
 
 // дальше идут стили приложения
 body {
-  height: 100vh;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,6 +161,10 @@ body {
 }
 
 @media screen and (max-width: 993px) {
+  body{
+    font-size: 34px;
+
+  }
   .wrapper{
     grid-template-columns: 1fr;
     grid-template-rows:  1fr 10% 1fr;;

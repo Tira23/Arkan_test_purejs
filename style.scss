@@ -163,13 +163,11 @@ body {
 @media screen and (max-width: 993px) {
   body{
     font-size: 34px;
-    //height: 100vh;
   }
 
   .wrapper{
     grid-template-columns: 1fr;
     grid-template-rows:  1fr 10% 1fr;
-    //height: 100%;
   }
 
   .arrowToRight{

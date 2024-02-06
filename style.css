@@ -156,12 +156,12 @@ body {
   body {
     font-size: 34px;
   }
+  .block {
+    height: 100%;
+  }
   .wrapper {
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 10% 1fr;
-  }
-  .block {
-    height: 100%;
   }
   .arrowToRight {
     transform: rotate(90deg);

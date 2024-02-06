@@ -1,0 +1,182 @@
+// обычный сброс стилей с помощью reset.css
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// дальше идут стили приложения
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+}
+
+.section {
+  height: 80%;
+  width: 70%;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 0 35px 9px rgba(98, 111, 182, 0.26);
+  -moz-box-shadow: 0 0 35px 9px rgba(98, 111, 182, 0.26);
+  box-shadow: 0 0 35px 9px rgba(98, 111, 182, 0.26);
+  padding: 50px;
+
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 10% 1fr;
+  grid-template-rows: 1fr;
+  height: 100%;
+  gap: 35px;
+
+}
+
+.blockWithArrows {
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 35px;
+}
+
+.block {
+  -webkit-box-shadow: 0 0 35px 2px rgba(98, 111, 182, 0.26);
+  -moz-box-shadow: 0 0 35px 2px rgba(98, 111, 182, 0.26);
+  box-shadow: 0 0 35px 2px rgba(98, 111, 182, 0.26);
+  border-radius: 10px;
+  padding: 25px;
+
+  & li {
+    margin-bottom: 15px;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 5px 1px rgba(163, 170, 206, 0.26);
+    -moz-box-shadow: 0 0 5px 1px rgba(163, 170, 206, 0.26);
+    box-shadow: 0 0 5px 1px rgba(163, 170, 206, 0.26);
+    border-radius: 5px;
+    padding: 5px;
+    transition: .2s all ease-in;
+  }
+}
+
+.left .selectLine {
+  background-color: rgba(0, 128, 0, 0.5);
+}
+
+.right .selectLine {
+  background-color: rgba(255, 0, 0, 0.5);
+}
+
+.arrowCenter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 60%;
+  }
+}
+
+.arrowButton {
+  -webkit-box-shadow: 0 0 35px 9px rgba(98, 111, 182, 0.26);
+  -moz-box-shadow: 0 0 35px 9px rgba(98, 111, 182, 0.26);
+  box-shadow: 0 0 35px 9px rgba(98, 111, 182, 0.26);
+  cursor: pointer;
+  border-radius: 10px;
+  transition: .3s;
+  height: 100px;
+  width: 100px;
+
+  &:hover {
+    -webkit-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    -moz-box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+}
+
+.arrowToLeft {
+  transform: rotate(180deg);
+}
+
+.doubleArrowToRight {
+  transform: rotate(90deg);
+}
+
+.doubleArrowToLeft {
+  transform: rotate(-90deg);
+}
+
+@media screen and (max-width: 1201px) {
+  .section {
+    width: 90%;
+    height: 90%;
+    padding: 20px;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+  }
+}
+
+@media screen and (max-width: 993px) {
+  .wrapper{
+    grid-template-columns: 1fr;
+    grid-template-rows:  1fr 10% 1fr;;
+  }
+  .arrowToRight{
+    transform: rotate(90deg);
+  }
+  .arrowToLeft {
+    transform: rotate(-90deg);
+  }
+
+  .doubleArrowToRight {
+    transform: rotate(180deg);
+  }
+
+  .doubleArrowToLeft {
+    transform: rotate(0deg);
+  }
+}
